@@ -113,9 +113,6 @@ public class TrieExample {
 
 ---
 
-
-## ✅ Summary
-
 * Trie is efficient for word search, prefix search, and autocomplete.
 * It uses a tree with nodes for each character.
 * Commonly used in search engines, spell-checkers, and dictionaries.
