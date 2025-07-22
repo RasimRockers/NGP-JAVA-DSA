@@ -224,7 +224,50 @@ public class Solution {
 ```
 
 ---
+Here's the **Java solution** to the LeetCode problem:
 
+## 7. 🔗 **Merge Sorted Array**
 
+[https://leetcode.com/problems/merge-sorted-array](https://leetcode.com/problems/merge-sorted-array)
 
+---
+
+### ✅ **Problem Summary**
+
+You are given two integer arrays:
+
+* `nums1` of size `m + n`, where the first `m` elements are valid and the last `n` are zeros (space to merge),
+* `nums2` of size `n`.
+
+You must **merge** `nums2` into `nums1` **in-place**, such that `nums1` becomes a sorted array.
+
+---
+
+### 💡 **Java Code (In-place, from end to start — O(m + n))**
+
+```java
+public class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int i = m - 1;            // last index of valid nums1
+        int j = n - 1;            // last index of nums2
+        int k = m + n - 1;        // last index of total nums1
+
+        // Merge from the end to avoid overwriting nums1
+        while (i >= 0 && j >= 0) {
+            if (nums1[i] > nums2[j]) {
+                nums1[k--] = nums1[i--];
+            } else {
+                nums1[k--] = nums2[j--];
+            }
+        }
+
+        // If any elements left in nums2
+        while (j >= 0) {
+            nums1[k--] = nums2[j--];
+        }
+    }
+}
+```
+
+---
 
