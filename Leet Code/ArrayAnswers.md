@@ -190,3 +190,41 @@ public class Solution {
 ---
 
 
+## 6. 🔗 **Contains Duplicate**
+
+[https://leetcode.com/problems/contains-duplicate](https://leetcode.com/problems/contains-duplicate)
+
+---
+
+### ✅ **Problem Summary**
+
+Given an integer array `nums`, return `true` if **any value appears at least twice** in the array, and `false` if every element is distinct.
+
+---
+
+### 💡 **Java Code Using HashSet (O(n) time, O(n) space)**
+
+```java
+import java.util.HashSet;
+
+public class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashSet<Integer> set = new HashSet<>();
+
+        for (int num : nums) {
+            if (set.contains(num)) {
+                return true;  
+            }
+            set.add(num);  
+        }
+
+        return false;  
+    }
+}
+```
+
+---
+
+
+
+
