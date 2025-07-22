@@ -49,13 +49,8 @@
 
      *Use fast and slow pointer method or HashSet.*
 
-9. **Valid Mountain Array**
 
-    🔗 [https://leetcode.com/problems/valid-mountain-array](https://leetcode.com/problems/valid-mountain-array)
-
-     *Check if the array forms a valid mountain shape.*
-
-10. **Third Maximum Number**
+9. **Third Maximum Number**
 
      🔗 [https://leetcode.com/problems/third-maximum-number](https://leetcode.com/problems/third-maximum-number)
 
