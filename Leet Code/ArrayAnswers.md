@@ -114,3 +114,44 @@ public class Solution {
 
 ---
 
+
+## 4. 🔗 **Move Zeroes**
+
+[https://leetcode.com/problems/move-zeroes](https://leetcode.com/problems/move-zeroes)
+
+---
+
+### ✅ **Problem Summary**
+
+Given an integer array `nums`, move all the `0`s to the **end** while maintaining the **relative order** of the non-zero elements.
+
+Do it **in-place** (no extra array), and in **O(n)** time.
+
+---
+
+### 💡 **Java Code (Two Pointers)**
+
+```java
+public class Solution {
+    public void moveZeroes(int[] nums) {
+        int index = 0;  // points to the place to insert non-zero
+
+        
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[index] = nums[i];
+                index++;
+            }
+        }
+
+       
+        while (index < nums.length) {
+            nums[index] = 0;
+            index++;
+        }
+    }
+}
+```
+
+---
+
