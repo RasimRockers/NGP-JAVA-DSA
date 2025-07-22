@@ -271,3 +271,49 @@ public class Solution {
 
 ---
 
+
+## 8. 🔗 **Find the Duplicate Number**
+
+[https://leetcode.com/problems/find-the-duplicate-number](https://leetcode.com/problems/find-the-duplicate-number)
+
+---
+
+### ✅ **Problem Summary**
+
+Given an array `nums` containing `n + 1` integers where each integer is in the range `[1, n]`, find the **one duplicate number**.
+
+Constraints:
+
+* Exactly **one** repeated number (may appear more than once)
+* **No modification** to array (read-only)
+* **O(1)** extra space preferred
+
+---
+
+
+```java
+public class Solution {
+    public int findDuplicate(int[] nums) {
+       
+        int slow = nums[0];
+        int fast = nums[0];
+
+        do {
+            slow = nums[slow];        // move 1 step
+            fast = nums[nums[fast]];  // move 2 steps
+        } while (slow != fast);
+
+        
+        slow = nums[0];
+        while (slow != fast) {
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+
+        return slow;
+    }
+}
+```
+
+---
+
