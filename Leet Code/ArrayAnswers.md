@@ -317,3 +317,56 @@ public class Solution {
 
 ---
 
+
+Here is the **Java solution** for the LeetCode problem:
+
+## 9. 🔗 **Third Maximum Number**
+
+[https://leetcode.com/problems/third-maximum-number](https://leetcode.com/problems/third-maximum-number)
+
+---
+
+### ✅ **Problem Summary**
+
+Given an integer array `nums`, return the **third distinct maximum number** in the array.
+If the third maximum does not exist, return the **maximum** number.
+
+---
+
+### 💡 **Java Code Using Variables (No Sorting, O(n) Time)**
+
+```java
+public class Solution {
+    public int thirdMax(int[] nums) {
+        Long first = null, second = null, third = null;
+
+        for (int num : nums) {
+            long n = num;
+
+            // Skip duplicates
+            if ((first != null && n == first) || 
+                (second != null && n == second) || 
+                (third != null && n == third)) {
+                continue;
+            }
+
+            // Update first, second, third max
+            if (first == null || n > first) {
+                third = second;
+                second = first;
+                first = n;
+            } else if (second == null || n > second) {
+                third = second;
+                second = n;
+            } else if (third == null || n > third) {
+                third = n;
+            }
+        }
+
+        return (third == null) ? first.intValue() : third.intValue();
+    }
+}
+```
+
+---
+
