@@ -38,3 +38,42 @@ public class Solution {
 
 ---
 
+
+## 2. 🔗 **Best Time to Buy and Sell Stock**
+
+[https://leetcode.com/problems/best-time-to-buy-and-sell-stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
+
+---
+
+### ✅ **Problem Summary**
+
+You're given an array `prices[]` where `prices[i]` is the price of a stock on the `i`-th day.
+You can buy and sell **once** — find the **maximum profit** you can achieve.
+
+---
+
+### 💡 **Java Code 
+
+```java
+public class Solution {
+    public int maxProfit(int[] prices) {
+        int minPrice = Integer.MAX_VALUE;  
+        int maxProfit = 0;                 
+
+        for (int price : prices) {
+            if (price < minPrice) {
+                minPrice = price;  
+            } else if (price - minPrice > maxProfit) {
+                maxProfit = price - minPrice; 
+            }
+        }
+
+        return maxProfit;
+    }
+}
+```
+
+---
+
+
+
