@@ -224,7 +224,7 @@ public class Solution {
 ```
 
 ---
-Here's the **Java solution** to the LeetCode problem:
+
 
 ## 7. 🔗 **Merge Sorted Array**
 
@@ -318,7 +318,7 @@ public class Solution {
 ---
 
 
-Here is the **Java solution** for the LeetCode problem:
+
 
 ## 9. 🔗 **Third Maximum Number**
 
