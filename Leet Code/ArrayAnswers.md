@@ -155,3 +155,38 @@ public class Solution {
 
 ---
 
+
+## 5.🔗 **Maximum Subarray**
+
+[https://leetcode.com/problems/maximum-subarray](https://leetcode.com/problems/maximum-subarray)
+
+---
+
+### ✅ **Problem Summary**
+
+Given an integer array `nums`, find the **contiguous subarray (at least one number)** that has the **largest sum**, and return that sum.
+
+---
+
+### 💡 **Java Code Using Kadane’s Algorithm (O(n))**
+
+```java
+public class Solution {
+    public int maxSubArray(int[] nums) {
+        int maxSoFar = nums[0];   
+        int currentSum = nums[0]; 
+
+        for (int i = 1; i < nums.length; i++) {
+            
+            currentSum = Math.max(nums[i], currentSum + nums[i]);
+            maxSoFar = Math.max(maxSoFar, currentSum);
+        }
+
+        return maxSoFar;
+    }
+}
+```
+
+---
+
+
